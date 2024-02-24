@@ -1,20 +1,25 @@
 {
-  "name": "timezone-converter",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JaySPatel2962/timezone-converter.git"
-  },
-  "keywords": ["timezone-convert", "timezone-converter", "timezone"],
-  "author": "Jay Patel",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JaySPatel2962/timezone-converter/issues"
-  },
-  "homepage": "https://github.com/JaySPatel2962/timezone-converter#readme"
+	"name": "time-converter-by-timezone",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JaySPatel2962/timezone-converter.git"
+	},
+	"keywords": [
+    "time-converter-by-timezone",
+		"timezone-convert",
+		"timezone-converter",
+		"timezone"
+	],
+	"author": "Jay Patel",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/JaySPatel2962/timezone-converter/issues"
+	},
+	"homepage": "https://github.com/JaySPatel2962/timezone-converter#readme"
 }
