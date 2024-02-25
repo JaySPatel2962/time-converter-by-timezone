@@ -1,5 +1,3 @@
-import moment from "moment/moment";
-
 export const convertCurrentTimeToRelatedZone = (originalTime, timezone) => {
 	// Get the current date in current time zone
 	const currentDate = new Date(originalTime);
@@ -27,8 +25,3 @@ export const convertCurrentTimeToRelatedZone = (originalTime, timezone) => {
 };
 
 // convertCurrentTimeToRelatedZone(new Date().getTime(), "Asia/Calcutta");
-
-export const timeConverterByMoment = (originalTime, timezone) => {
-	console.log("timeConverterByMoment");
-	return convertCurrentTimeToRelatedZone(originalTime, timezone);
-};
