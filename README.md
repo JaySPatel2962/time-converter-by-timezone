@@ -17,9 +17,9 @@ yarn add time-converter-by-timezone
 ## Usage
 
 ```javascript
-import { convertCurrentTimeToRelatedZone } from "time-converter-by-timezone";
+import { convertTimeToTargetTimeZone } from "time-converter-by-timezone";
 
-const time = convertCurrentTimeToRelatedZone(
+const time = convertTimeToTargetTimeZone(
 	"02/25/2024, 7:50:47 AM", // You can pass time as you want in any date format
 	"Australia/Perth" // Target timezone
 );

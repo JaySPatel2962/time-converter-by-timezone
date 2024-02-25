@@ -1,4 +1,4 @@
-export const convertCurrentTimeToRelatedZone = (originalTime, timezone) => {
+export const convertTimeToTargetTimeZone = (originalTime, timezone) => {
 	// Get the current date in current time zone
 	const currentDate = new Date(originalTime);
 	// console.log("\n\n currentDate: ", currentDate.toLocaleString());
