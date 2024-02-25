@@ -1,27 +1,19 @@
-export const convertTimeToTargetTimeZone = (originalTime, timezone) => {
-	// Get the current date in current time zone
-	const currentDate = new Date(originalTime);
-	// console.log("\n\n currentDate: ", currentDate.toLocaleString());
-	// console.log("currentDate: ", currentDate.getTime());
+export const convertTimeToTargetTimeZone = (time, timezone) => {
+	// Get the date in current time zone
+	const date = new Date(time);
 
 	// Create a temporary date object for the specified timezone
-	const tempDate = new Date(
-		currentDate.toLocaleString("en-US", { timeZone: timezone })
+	const convertedDate = new Date(
+		date.toLocaleString("en-US", { timeZone: timezone })
 	);
-	// console.log("tempDate: ", tempDate.toLocaleString());
-	// console.log("tempDate: ", tempDate.getTime());
 
-	const timediff = currentDate.getTime() - tempDate.getTime();
-	// console.log("timediff: ", timediff);
+	// calculate time diff
+	const timediff = date.getTime() - convertedDate.getTime();
 
-	const timezoneTime = currentDate.getTime() + timediff;
-	// console.log("timezoneTime: ", timezoneTime);
-	// console.log("timezoneTime: ", new Date(timezoneTime).toLocaleString());
+	const timezoneTime = date.getTime() + timediff;
 
-	const currentZoneTimeOfOtherZone = new Date(timezoneTime);
-	// console.log("currentZoneTimeOfOtherZone: ", currentZoneTimeOfOtherZone);
+	const timeOfOtherTimezone = new Date(timezoneTime);
 
-	return currentZoneTimeOfOtherZone.toISOString();
+	// return ISO string
+	return timeOfOtherTimezone.toISOString();
 };
-
-// convertCurrentTimeToRelatedZone(new Date().getTime(), "Asia/Calcutta");
