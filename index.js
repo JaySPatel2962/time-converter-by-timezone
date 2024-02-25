@@ -1,4 +1,4 @@
-export const convertTimeToTargetTimeZone = (time, timezone) => {
+const convertTimeToTargetTimeZone = (time, timezone) => {
 	// Get the date in current time zone
 	const date = new Date(time);
 
@@ -17,3 +17,5 @@ export const convertTimeToTargetTimeZone = (time, timezone) => {
 	// return ISO string
 	return timeOfOtherTimezone.toISOString();
 };
+
+module.exports = { convertTimeToTargetTimeZone };
