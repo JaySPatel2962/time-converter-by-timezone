@@ -1,21 +1,18 @@
-const convertTimeToTargetTimeZone = (time, timezone) => {
-	// Get the date in current time zone
-	const date = new Date(time);
+const {
+	typeCheck,
+	getDate,
+	getDateOfOtherTimezone,
+	calculateTimeDiff,
+	getTimeOfZone,
+} = require("./src/helpers");
 
-	// Create a temporary date object for the specified timezone
-	const convertedDate = new Date(
-		date.toLocaleString("en-US", { timeZone: timezone })
-	);
-
-	// calculate time diff
-	const timediff = date.getTime() - convertedDate.getTime();
-
-	const timezoneTime = date.getTime() + timediff;
-
-	const timeOfOtherTimezone = new Date(timezoneTime);
-
-	// return ISO string
+function convertTimeToTargetTimeZone(time, timezone) {
+	typeCheck(time);
+	const date = getDate(time);
+	const convertedDate = getDateOfOtherTimezone(time, timezone);
+	const timediff = calculateTimeDiff(date, convertedDate);
+	const timeOfOtherTimezone = getTimeOfZone(date, timediff);
 	return timeOfOtherTimezone.toISOString();
-};
+}
 
 module.exports = { convertTimeToTargetTimeZone };
