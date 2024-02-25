@@ -22,8 +22,5 @@
 	"bugs": {
 		"url": "https://github.com/JaySPatel2962/timezone-converter/issues"
 	},
-	"homepage": "https://github.com/JaySPatel2962/timezone-converter#readme",
-	"dependencies": {
-		"moment": "^2.30.1"
-	}
+	"homepage": "https://github.com/JaySPatel2962/timezone-converter#readme"
 }
