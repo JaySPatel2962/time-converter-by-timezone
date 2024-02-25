@@ -28,5 +28,5 @@ console.log("time: ", time);
 console.log("Local string: ", new Date(time).toLocaleString());
 // Local string: 2/25/2024, 8:30:00 AM
 
-// Note: Current timezone is Asia/Calcutta
+// Note: Current timezone is Asia/Calcutta and it is pick automatic
 ```
