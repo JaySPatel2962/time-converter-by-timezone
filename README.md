@@ -1,4 +1,4 @@
-# timezone-converter
+# time-converter-by-timezone
 
 Convert Timezone is a lightweight npm package that simplifies the process of converting time from one timezone to another, with zero dependencies. Whether you need to convert from IST to Australia/Perth or any other timezone, this package handles the conversion seamlessly. Simply input the current timezone time and the target timezone, and Convert Timezone will provide the equivalent time in the desired timezone, making timezone conversions hassle-free.
 
