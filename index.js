@@ -9,7 +9,7 @@ const {
 function convertTimeToTargetTimeZone(time, timezone) {
 	typeCheck(time);
 	const date = getDate(time);
-	const convertedDate = getDateOfOtherTimezone(time, timezone);
+	const convertedDate = getDateOfOtherTimezone(date, timezone);
 	const timediff = calculateTimeDiff(date, convertedDate);
 	const timeOfOtherTimezone = getTimeOfZone(date, timediff);
 	return timeOfOtherTimezone.toISOString();
