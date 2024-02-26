@@ -36,15 +36,15 @@ console.log("Local string: ", new Date(time).toLocaleString());
 // Hence when 8:30 AM Asia/Calcutta equals to 11 AM Australia/Perth time
 ```
 
-Convert date to one timezone to target timezone date
+Convert date to one timezone to target timezone date. You can get date/time that refers target timezone
 
 ```javascript
 import { oneTimezoneToTargetTimezone } from "time-converter-by-timezone";
 
 const time = oneTimezoneToTargetTimezone(
-	"02/25/2024, 11:00:00 AM",
-	"Asia/Calcutta",
-	"Australia/Perth"
+	"02/25/2024, 11:00:00 AM", // You can pass time as you want in any date format
+	"Asia/Calcutta", // You can mention your timezone
+	"Australia/Perth" // Target timezone
 );
 console.log("time = ", time);
 // time: 2024-02-25T03:00:00.000Z
