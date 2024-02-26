@@ -29,4 +29,7 @@ console.log("Local string: ", new Date(time).toLocaleString());
 // Local string: 2/25/2024, 8:30:00 AM
 
 // Note: Current timezone is Asia/Calcutta and it will pick automatic
+
+// Australia/Perth timezone is 2:30 hours ahead of Asia/Calcutta timezone
+// Hence when 8:30 AM Asia/Calcutta equals to 11 AM Australia/Perth time
 ```
