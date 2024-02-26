@@ -11,9 +11,11 @@
 		"url": "git+https://github.com/JaySPatel2962/timezone-converter.git"
 	},
 	"keywords": [
+		"date-converter-by-timezone",
 		"time-converter-by-timezone",
 		"timezone-convert",
 		"timezone-converter",
+		"date-converter",
 		"timezone"
 	],
 	"author": "Jay Patel",
