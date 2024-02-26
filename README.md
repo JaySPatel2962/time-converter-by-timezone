@@ -16,19 +16,40 @@ yarn add time-converter-by-timezone
 
 ## Usage
 
-```javascript
-import { convertTimeToTargetTimeZone } from "time-converter-by-timezone";
+Convert current timezone date to target timezone date
 
-const time = convertTimeToTargetTimeZone(
+```javascript
+// Note: Current timezone will pick automatically
+
+import { convertTimeToTargetTimezone } from "time-converter-by-timezone";
+
+const time = convertTimeToTargetTimezone(
 	"02/25/2024, 11:00:00 AM", // You can pass time as you want in any date format
 	"Australia/Perth" // Target timezone
 );
 console.log("time: ", time);
 // time: 2024-02-25T03:00:00.000Z
 console.log("Local string: ", new Date(time).toLocaleString());
-// Local string: 2/25/2024, 8:30:00 AM
+// Local string: 25/2/2024, 8:30:00 am
 
-// Note: Current timezone is Asia/Calcutta and it will pick automatic
+// Australia/Perth timezone is 2:30 hours ahead of Asia/Calcutta timezone
+// Hence when 8:30 AM Asia/Calcutta equals to 11 AM Australia/Perth time
+```
+
+Convert date to one timezone to target timezone date
+
+```javascript
+import { oneTimezoneToTargetTimezone } from "time-converter-by-timezone";
+
+const time = oneTimezoneToTargetTimezone(
+	"02/25/2024, 11:00:00 AM",
+	"Asia/Calcutta",
+	"Australia/Perth"
+);
+console.log("time = ", time);
+// time: 2024-02-25T03:00:00.000Z
+console.log("Local string = ", new Date(time).toLocaleString());
+// Local string: 25/2/2024, 8:30:00 am
 
 // Australia/Perth timezone is 2:30 hours ahead of Asia/Calcutta timezone
 // Hence when 8:30 AM Asia/Calcutta equals to 11 AM Australia/Perth time

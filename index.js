@@ -6,13 +6,23 @@ const {
 	getTimeOfZone,
 } = require("./src/helpers");
 
-function convertTimeToTargetTimeZone(time, timezone) {
-	typeCheck(time);
-	const date = getDate(time);
-	const convertedDate = getDateOfOtherTimezone(date, timezone);
-	const timediff = calculateTimeDiff(date, convertedDate);
-	const timeOfOtherTimezone = getTimeOfZone(date, timediff);
+function convertTimeToTargetTimezone(date, targetTimezone) {
+	typeCheck(date);
+	const dateInstance = getDate(date);
+	const convertedDate = getDateOfOtherTimezone(dateInstance, targetTimezone);
+	const timediff = calculateTimeDiff(dateInstance, convertedDate);
+	const timeOfOtherTimezone = getTimeOfZone(dateInstance, timediff);
 	return timeOfOtherTimezone.toISOString();
 }
 
-module.exports = { convertTimeToTargetTimeZone };
+function oneTimezoneToTargetTimezone(date, timezone, targetTimezone) {
+	typeCheck(date);
+	const dateInstance = getDate(date);
+	const time1 = getDateOfOtherTimezone(dateInstance, timezone);
+	const time2 = getDateOfOtherTimezone(dateInstance, targetTimezone);
+	const timediff = calculateTimeDiff(time1, time2);
+	const timeOfOtherTimezone = getTimeOfZone(dateInstance, timediff);
+	return timeOfOtherTimezone.toISOString();
+}
+
+module.exports = { convertTimeToTargetTimezone, oneTimezoneToTargetTimezone };
